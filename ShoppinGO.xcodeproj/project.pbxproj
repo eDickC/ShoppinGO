@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
+		23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */; };
+		23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1E1E23CC1000DA50BC /* ViewController.swift */; };
+		23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB201E23CC1000DA50BC /* Main.storyboard */; };
+		23D2AB241E23CC1000DA50BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB231E23CC1000DA50BC /* Assets.xcassets */; };
+		23D2AB271E23CC1000DA50BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */; };
+		344752584D586A1FDF6FA6B2 /* Pods_ShoppinGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829D8F3D5B3D6B946206ED54 /* Pods_ShoppinGO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		238E96CA1E23CE3800F39745 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		23D2AB191E23CC1000DA50BC /* ShoppinGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppinGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23D2AB1E1E23CC1000DA50BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23D2AB211E23CC1000DA50BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23D2AB231E23CC1000DA50BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23D2AB261E23CC1000DA50BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23D2AB281E23CC1000DA50BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		829D8F3D5B3D6B946206ED54 /* Pods_ShoppinGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppinGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D22CF475F345BC66866F117 /* Pods-ShoppinGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppinGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO.release.xcconfig"; sourceTree = "<group>"; };
+		A20510F3C37AEAED5514FC72 /* Pods-ShoppinGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppinGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23D2AB161E23CC1000DA50BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344752584D586A1FDF6FA6B2 /* Pods_ShoppinGO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		099FD0D73D7BF58A2E4384A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20510F3C37AEAED5514FC72 /* Pods-ShoppinGO.debug.xcconfig */,
+				8D22CF475F345BC66866F117 /* Pods-ShoppinGO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		104BC3EDB6967C469BC35C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				829D8F3D5B3D6B946206ED54 /* Pods_ShoppinGO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23D2AB101E23CC1000DA50BC = {
+			isa = PBXGroup;
+			children = (
+				23D2AB1B1E23CC1000DA50BC /* ShoppinGO */,
+				23D2AB1A1E23CC1000DA50BC /* Products */,
+				099FD0D73D7BF58A2E4384A0 /* Pods */,
+				238E96CA1E23CE3800F39745 /* .gitignore */,
+				104BC3EDB6967C469BC35C77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		23D2AB1A1E23CC1000DA50BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23D2AB191E23CC1000DA50BC /* ShoppinGO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23D2AB1B1E23CC1000DA50BC /* ShoppinGO */ = {
+			isa = PBXGroup;
+			children = (
+				23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */,
+				23D2AB1E1E23CC1000DA50BC /* ViewController.swift */,
+				23D2AB201E23CC1000DA50BC /* Main.storyboard */,
+				23D2AB231E23CC1000DA50BC /* Assets.xcassets */,
+				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
+				23D2AB281E23CC1000DA50BC /* Info.plist */,
+			);
+			path = ShoppinGO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23D2AB181E23CC1000DA50BC /* ShoppinGO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D2AB2B1E23CC1000DA50BC /* Build configuration list for PBXNativeTarget "ShoppinGO" */;
+			buildPhases = (
+				229A1DB7FA61281BDEB1DCB5 /* [CP] Check Pods Manifest.lock */,
+				23D2AB151E23CC1000DA50BC /* Sources */,
+				23D2AB161E23CC1000DA50BC /* Frameworks */,
+				23D2AB171E23CC1000DA50BC /* Resources */,
+				6B3D115CDD96BEDB05372F12 /* [CP] Embed Pods Frameworks */,
+				14B1DC3B32C0B6CD831E13AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShoppinGO;
+			productName = ShoppinGO;
+			productReference = 23D2AB191E23CC1000DA50BC /* ShoppinGO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23D2AB111E23CC1000DA50BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Eduard Cihuňka";
+				TargetAttributes = {
+					23D2AB181E23CC1000DA50BC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VXTK9LJ27B;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 23D2AB141E23CC1000DA50BC /* Build configuration list for PBXProject "ShoppinGO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23D2AB101E23CC1000DA50BC;
+			productRefGroup = 23D2AB1A1E23CC1000DA50BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23D2AB181E23CC1000DA50BC /* ShoppinGO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23D2AB171E23CC1000DA50BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238E96CB1E23CE3800F39745 /* .gitignore in Resources */,
+				23D2AB271E23CC1000DA50BC /* LaunchScreen.storyboard in Resources */,
+				23D2AB241E23CC1000DA50BC /* Assets.xcassets in Resources */,
+				23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B1DC3B32C0B6CD831E13AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		229A1DB7FA61281BDEB1DCB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3D115CDD96BEDB05372F12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23D2AB151E23CC1000DA50BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
+				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23D2AB201E23CC1000DA50BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23D2AB211E23CC1000DA50BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23D2AB261E23CC1000DA50BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23D2AB291E23CC1000DA50BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23D2AB2A1E23CC1000DA50BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23D2AB2C1E23CC1000DA50BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20510F3C37AEAED5514FC72 /* Pods-ShoppinGO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXTK9LJ27B;
+				INFOPLIST_FILE = ShoppinGO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eduard.cihunka.ShoppinGO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		23D2AB2D1E23CC1000DA50BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D22CF475F345BC66866F117 /* Pods-ShoppinGO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXTK9LJ27B;
+				INFOPLIST_FILE = ShoppinGO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eduard.cihunka.ShoppinGO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23D2AB141E23CC1000DA50BC /* Build configuration list for PBXProject "ShoppinGO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D2AB291E23CC1000DA50BC /* Debug */,
+				23D2AB2A1E23CC1000DA50BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D2AB2B1E23CC1000DA50BC /* Build configuration list for PBXNativeTarget "ShoppinGO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D2AB2C1E23CC1000DA50BC /* Debug */,
+				23D2AB2D1E23CC1000DA50BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23D2AB111E23CC1000DA50BC /* Project object */;
+}
