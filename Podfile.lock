@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.2.0)
+  - EstimoteSDK (4.11.2)
   - Realm (2.1.0):
     - Realm/Headers (= 2.1.0)
   - Realm/Headers (2.1.0)
@@ -8,13 +9,15 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EstimoteSDK
   - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  EstimoteSDK: 79e289736d75b56bbd8ecb4cf518c3a007c6fb49
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
 
-PODFILE CHECKSUM: 04821a5a5b3774faca691449b8666112f48375d7
+PODFILE CHECKSUM: 735e2982b14ac96943770af7c493a79cbc981d79
 
 COCOAPODS: 1.1.1

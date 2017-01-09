@@ -7,5 +7,6 @@ target 'ShoppinGO' do
 
   pod 'RealmSwift’
   pod 'Alamofire’
+  pod 'EstimoteSDK'
 
 end

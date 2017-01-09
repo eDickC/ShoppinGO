@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
+		23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */; };
+		23AA8D031E23FCD00076A840 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8D021E23FCD00076A840 /* UIView.swift */; };
 		23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */; };
 		23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1E1E23CC1000DA50BC /* ViewController.swift */; };
 		23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB201E23CC1000DA50BC /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		238E96CA1E23CE3800F39745 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		23AA8D021E23FCD00076A840 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		23AA8D041E24035E0076A840 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = ../ObjCBridge.h; sourceTree = "<group>"; };
 		23D2AB191E23CC1000DA50BC /* ShoppinGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppinGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D2AB1E1E23CC1000DA50BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +64,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		23AA8D011E23FC120076A840 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23AA8D021E23FCD00076A840 /* UIView.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		23D2AB101E23CC1000DA50BC = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +80,7 @@
 				099FD0D73D7BF58A2E4384A0 /* Pods */,
 				238E96CA1E23CE3800F39745 /* .gitignore */,
 				104BC3EDB6967C469BC35C77 /* Frameworks */,
+				23AA8D011E23FC120076A840 /* Extensions */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +97,12 @@
 			children = (
 				23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */,
 				23D2AB1E1E23CC1000DA50BC /* ViewController.swift */,
+				23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */,
 				23D2AB201E23CC1000DA50BC /* Main.storyboard */,
 				23D2AB231E23CC1000DA50BC /* Assets.xcassets */,
 				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
 				23D2AB281E23CC1000DA50BC /* Info.plist */,
+				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
 			);
 			path = ShoppinGO;
 			sourceTree = "<group>";
@@ -216,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AA8D031E23FCD00076A840 /* UIView.swift in Sources */,
+				23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */,
 				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
 			);
@@ -283,11 +301,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -326,9 +345,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -338,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A20510F3C37AEAED5514FC72 /* Pods-ShoppinGO.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXTK9LJ27B;
 				INFOPLIST_FILE = ShoppinGO/Info.plist;
@@ -352,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D22CF475F345BC66866F117 /* Pods-ShoppinGO.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VXTK9LJ27B;
 				INFOPLIST_FILE = ShoppinGO/Info.plist;
