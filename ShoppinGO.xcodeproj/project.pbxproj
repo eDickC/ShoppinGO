@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */; };
 		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
 		23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */; };
 		23AA8D031E23FCD00076A840 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8D021E23FCD00076A840 /* UIView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconTableViewCell.swift; sourceTree = "<group>"; };
 		238E96CA1E23CE3800F39745 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AA8D021E23FCD00076A840 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
 				23D2AB281E23CC1000DA50BC /* Info.plist */,
 				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
+				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
 			);
 			path = ShoppinGO;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				23AA8D031E23FCD00076A840 /* UIView.swift in Sources */,
 				23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */,
 				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
+				2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
