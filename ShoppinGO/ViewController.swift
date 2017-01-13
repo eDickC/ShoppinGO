@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var beacons = [Beacon]()
     let beaconManager = ESTBeaconManager()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             beacon.name = region.identifier
             beacon.id = region.proximityUUID.uuidString
             beacons.append(beacon)
+            
+            createNotification(beacon)
         }
         
         if region.identifier == "dark blue" {
@@ -62,6 +65,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             beacon.name = region.identifier
             beacon.id = region.proximityUUID.uuidString
             beacons.append(beacon)
+            
+            createNotification(beacon)
         }
         
         tableView.reloadData()
@@ -96,5 +101,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    func createNotification(_ beacon: Beacon) {
+        let notificationIdentifier = beacon.id
+        let content = UNMutableNotificationContent()
+        content.title = "ShoppinGO"
+        content.body = beacon.name
+        content.sound = UNNotificationSound.default()
+        
+        let triggerd = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest.init(identifier: notificationIdentifier, content: content, trigger: triggerd)
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request)
+    }
 }
+
 
