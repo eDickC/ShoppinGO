@@ -11,6 +11,8 @@
 		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
 		23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */; };
 		23AA8D031E23FCD00076A840 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8D021E23FCD00076A840 /* UIView.swift */; };
+		23AF26A51E2D6F6A00738DA1 /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */; };
+		23AF26A71E2D709A00738DA1 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */; };
 		23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */; };
 		23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1E1E23CC1000DA50BC /* ViewController.swift */; };
 		23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB201E23CC1000DA50BC /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AA8D021E23FCD00076A840 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		23AA8D041E24035E0076A840 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = ../ObjCBridge.h; sourceTree = "<group>"; };
+		23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
+		23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		23D2AB191E23CC1000DA50BC /* ShoppinGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppinGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D2AB1E1E23CC1000DA50BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				23D2AB281E23CC1000DA50BC /* Info.plist */,
 				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
 				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
+				23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */,
+				23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */,
 			);
 			path = ShoppinGO;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AF26A71E2D709A00738DA1 /* AddCardViewController.swift in Sources */,
 				23AA8D031E23FCD00076A840 /* UIView.swift in Sources */,
 				23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */,
+				23AF26A51E2D6F6A00738DA1 /* ScannerController.swift in Sources */,
 				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
 				2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
