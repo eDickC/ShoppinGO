@@ -18,6 +18,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var capturedCode: String?
+    var capturedCodeType: String?
     
     let supportedCodeTypes = [AVMetadataObjectTypeUPCECode,
                               AVMetadataObjectTypeCode39Code,
@@ -105,6 +106,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
             if let data = metadataObj.stringValue {
                 messageLabel.text = data
                 capturedCode = data
+                capturedCodeType = metadataObj.type
             }
         }
     }

@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import ZXingObjC
+import AVFoundation
 
 class AddCardViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class AddCardViewController: UIViewController {
     @IBOutlet weak var cardholderName: UITextField!
     @IBOutlet weak var cardCodeLabel: UILabel!
     @IBOutlet weak var cardCodeImage: UIImageView!
-    
+    var cardCodeType = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,13 +53,52 @@ class AddCardViewController: UIViewController {
     @IBAction func unwindToAddCardScreen(segue: UIStoryboardSegue) {
         if let sourceViewController = segue.source as? ScannerController {
             cardCodeLabel.text = sourceViewController.capturedCode
+            var format: ZXBarcodeFormat?
+            if let capturedCodeType = sourceViewController.capturedCodeType {
+                cardCodeType = capturedCodeType
+                
+                switch cardCodeType {
+                case AVMetadataObjectTypeUPCECode:
+                    format = kBarcodeFormatEan13
+                case AVMetadataObjectTypeEAN8Code:
+                    format = kBarcodeFormatEan8
+                case AVMetadataObjectTypeEAN13Code:
+                    format = kBarcodeFormatEan13
+                case AVMetadataObjectTypeCode39Code:
+                    format = kBarcodeFormatCode39
+                case AVMetadataObjectTypeUPCECode:
+                    format = kBarcodeFormatUPCE
+                case AVMetadataObjectTypeCode128Code:
+                    format = kBarcodeFormatCode128
+                case AVMetadataObjectTypeITF14Code:
+                    format = kBarcodeFormatITF
+                case AVMetadataObjectTypeQRCode:
+                    format = kBarcodeFormatQRCode
+                case AVMetadataObjectTypeDataMatrixCode:
+                    format = kBarcodeFormatDataMatrix
+                case AVMetadataObjectTypeAztecCode:
+                    format = kBarcodeFormatAztec
+                case AVMetadataObjectTypePDF417Code:
+                    format = kBarcodeFormatPDF417
+                default:
+                    format = nil
+                }
+            }
             
             do {
                 let writer = ZXMultiFormatWriter()
                 let hints = ZXEncodeHints()
-                let result = try writer.encode(cardCodeLabel.text, format: kBarcodeFormatEan13, width: 1000, height: 1000)
-                let image = ZXImage(matrix: result)
-                cardCodeImage.image = UIImage(cgImage: image!.cgimage)
+                if let format = format {
+                    let result = try writer.encode(cardCodeLabel.text, format: format, width: 1000, height: 1000)
+                    let image = ZXImage(matrix: result)
+                    cardCodeImage.image = UIImage(cgImage: image!.cgimage)
+                } else {
+                    let alert = UIAlertController(title: "Error", message: "Your code wasn't recoginized", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(action)
+                    present(alert, animated: true, completion: nil)
+                }
+                
             } catch {
                 print(error)
             }
