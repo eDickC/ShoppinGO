@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddCardViewController: UIViewController {
 
     @IBOutlet weak var cardNameTextField: UITextField!
+    @IBOutlet weak var cardholderName: UITextField!
     @IBOutlet weak var cardCodeLabel: UILabel!
+    @IBOutlet weak var cardCodeImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -25,11 +28,36 @@ class AddCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveCard(_ sender: UIBarButtonItem) {
+        let card = Card()
+        card.cardName = cardNameTextField.text!
+        card.cardHolderName = cardholderName.text!
+        card.cardCode = cardCodeLabel.text!
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(card)
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+  
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func unwindToAddCardScreen(segue: UIStoryboardSegue) {
         if let sourceViewController = segue.source as? ScannerController {
             cardCodeLabel.text = sourceViewController.capturedCode
+            
+            let data = cardCodeLabel.text?.data(using: String.Encoding.ascii)
+            let filter = CIFilter(name: "CICode128BarcodeGenerator")
+            filter?.setValue(data, forKey: "inputMessage")
+            cardCodeImage.image = UIImage(ciImage: (filter?.outputImage)!)
+
         }
-        dismiss(animated: true, completion: nil)
     }
 
     /*

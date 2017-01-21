@@ -13,6 +13,9 @@
 		23AA8D031E23FCD00076A840 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8D021E23FCD00076A840 /* UIView.swift */; };
 		23AF26A51E2D6F6A00738DA1 /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */; };
 		23AF26A71E2D709A00738DA1 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */; };
+		23C4F4351E336C3200E07B28 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4F4341E336C3200E07B28 /* Card.swift */; };
+		23C4F4371E33726500E07B28 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4F4361E33726500E07B28 /* CardViewController.swift */; };
+		23C4F4391E33783800E07B28 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4F4381E33783800E07B28 /* CardCollectionViewCell.swift */; };
 		23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */; };
 		23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D2AB1E1E23CC1000DA50BC /* ViewController.swift */; };
 		23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB201E23CC1000DA50BC /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		23AA8D041E24035E0076A840 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = ../ObjCBridge.h; sourceTree = "<group>"; };
 		23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
 		23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		23C4F4341E336C3200E07B28 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		23C4F4361E33726500E07B28 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		23C4F4381E33783800E07B28 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		23D2AB191E23CC1000DA50BC /* ShoppinGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppinGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D2AB1E1E23CC1000DA50BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
 				23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */,
 				23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */,
+				23C4F4341E336C3200E07B28 /* Card.swift */,
+				23C4F4361E33726500E07B28 /* CardViewController.swift */,
+				23C4F4381E33783800E07B28 /* CardCollectionViewCell.swift */,
 			);
 			path = ShoppinGO;
 			sourceTree = "<group>";
@@ -246,8 +255,11 @@
 				23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */,
 				23AF26A51E2D6F6A00738DA1 /* ScannerController.swift in Sources */,
 				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
+				23C4F4371E33726500E07B28 /* CardViewController.swift in Sources */,
 				2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
+				23C4F4391E33783800E07B28 /* CardCollectionViewCell.swift in Sources */,
+				23C4F4351E336C3200E07B28 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
