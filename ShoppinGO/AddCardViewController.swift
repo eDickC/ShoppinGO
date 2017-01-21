@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ZXingObjC
 
 class AddCardViewController: UIViewController {
 
@@ -52,11 +53,17 @@ class AddCardViewController: UIViewController {
         if let sourceViewController = segue.source as? ScannerController {
             cardCodeLabel.text = sourceViewController.capturedCode
             
-            let data = cardCodeLabel.text?.data(using: String.Encoding.ascii)
-            let filter = CIFilter(name: "CICode128BarcodeGenerator")
-            filter?.setValue(data, forKey: "inputMessage")
-            cardCodeImage.image = UIImage(ciImage: (filter?.outputImage)!)
-
+            do {
+                let writer = ZXMultiFormatWriter()
+                let hints = ZXEncodeHints()
+                let result = try writer.encode(cardCodeLabel.text, format: kBarcodeFormatEan13, width: 1000, height: 1000)
+                let image = ZXImage(matrix: result)
+                cardCodeImage.image = UIImage(cgImage: image!.cgimage)
+            } catch {
+                print(error)
+            }
+            
+            
         }
     }
 

@@ -6,18 +6,23 @@ PODS:
   - Realm/Headers (2.1.0)
   - RealmSwift (2.1.0):
     - Realm (= 2.1.0)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - EstimoteSDK
   - RealmSwift
+  - ZXingObjC
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   EstimoteSDK: 79e289736d75b56bbd8ecb4cf518c3a007c6fb49
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 735e2982b14ac96943770af7c493a79cbc981d79
+PODFILE CHECKSUM: 0e88687ef6939f2e51d03dfb6e85dac7b6b28f06
 
 COCOAPODS: 1.1.1

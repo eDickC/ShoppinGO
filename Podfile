@@ -8,5 +8,6 @@ target 'ShoppinGO' do
   pod 'RealmSwift’
   pod 'Alamofire’
   pod 'EstimoteSDK'
+  pod 'ZXingObjC'
 
 end

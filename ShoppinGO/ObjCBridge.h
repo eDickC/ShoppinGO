@@ -10,5 +10,6 @@
 #define ObjCBridge_h
 
 #import <EstimoteSDK/EstimoteSDK.h>
+#import <ZXingObjC/ZXingObjC.h>
 
 #endif /* ObjCBridge_h */
