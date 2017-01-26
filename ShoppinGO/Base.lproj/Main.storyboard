@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -108,29 +108,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuzana Plesingerova" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-mP-dIn">
-                                                    <rect key="frame" x="91" y="91" width="158.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2003123233345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPC-sL-4c4">
-                                                    <rect key="frame" x="105" y="116" width="130" height="21"/>
+                                                    <rect key="frame" x="105" y="126" width="130" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8J-fr-J68">
-                                                    <rect key="frame" x="50" y="8" width="240" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8J-fr-J68">
+                                                    <rect key="frame" x="50" y="18" width="240" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="of8-wj-sOd"/>
+                                                        <constraint firstAttribute="height" constant="75" id="vQB-EY-SUV"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuzana Plesingerova" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-mP-dIn">
+                                                    <rect key="frame" x="91" y="101" width="158.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="v0f-mP-dIn" firstAttribute="top" secondItem="I8J-fr-J68" secondAttribute="bottom" constant="8" id="B8q-eM-Sux"/>
                                             <constraint firstItem="ZPC-sL-4c4" firstAttribute="top" secondItem="v0f-mP-dIn" secondAttribute="bottom" constant="4" id="Bod-4q-8iQ"/>
+                                            <constraint firstItem="I8J-fr-J68" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="EY6-ff-h4a"/>
+                                            <constraint firstItem="I8J-fr-J68" firstAttribute="top" secondItem="YEi-A4-EMs" secondAttribute="topMargin" constant="10" id="RaG-Nb-eqe"/>
                                             <constraint firstItem="v0f-mP-dIn" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="fuy-Rv-Nqa"/>
-                                            <constraint firstItem="v0f-mP-dIn" firstAttribute="top" secondItem="YEi-A4-EMs" secondAttribute="topMargin" constant="83" id="k6g-52-Vhi"/>
                                             <constraint firstItem="ZPC-sL-4c4" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="q2T-Hw-4kb"/>
                                         </constraints>
                                         <connections>
@@ -159,6 +164,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="kiA-cm-WYw" id="Qo7-Bc-ZWb"/>
+                        <segue destination="Px4-2T-0Gv" kind="presentation" identifier="editCard" id="vua-oJ-WtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atr-1o-0h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -456,4 +462,7 @@
             <point key="canvasLocation" x="3793" y="618"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vua-oJ-WtZ"/>
+    </inferredMetricsTieBreakers>
 </document>
