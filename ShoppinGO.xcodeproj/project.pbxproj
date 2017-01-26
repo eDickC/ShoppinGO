@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23446DE31E3AA946001B812D /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23446DE21E3AA946001B812D /* KeychainWrapper.m */; };
 		2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */; };
 		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
 		23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23446DE11E3AA946001B812D /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		23446DE21E3AA946001B812D /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconTableViewCell.swift; sourceTree = "<group>"; };
 		238E96CA1E23CE3800F39745 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
 				23D2AB281E23CC1000DA50BC /* Info.plist */,
 				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
+				23446DE11E3AA946001B812D /* KeychainWrapper.h */,
+				23446DE21E3AA946001B812D /* KeychainWrapper.m */,
 				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
 				23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */,
 				23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */,
@@ -161,6 +166,7 @@
 					23D2AB181E23CC1000DA50BC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VXTK9LJ27B;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -257,6 +263,7 @@
 				23D2AB1F1E23CC1000DA50BC /* ViewController.swift in Sources */,
 				23C4F4371E33726500E07B28 /* CardViewController.swift in Sources */,
 				2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */,
+				23446DE31E3AA946001B812D /* KeychainWrapper.m in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
 				23C4F4391E33783800E07B28 /* CardCollectionViewCell.swift in Sources */,
 				23C4F4351E336C3200E07B28 /* Card.swift in Sources */,
@@ -384,11 +391,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VXTK9LJ27B;
 				INFOPLIST_FILE = ShoppinGO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eduard.cihunka.ShoppinGO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -399,6 +408,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VXTK9LJ27B;
 				INFOPLIST_FILE = ShoppinGO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -37,25 +37,24 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillAppear(_ animated: Bool) {
         cards.removeAll()
-//        DispatchQueue.global().async {
-//            let realm = try! Realm()
-//            let cards = realm.objects(Card.self)
-//            
-//            for card in cards {
-//                var temporaryCard = Card()
-//                temporaryCard.code =
-//                temporaryCard.code = card.code
-//                temporaryCard.holderName = card.holderName
-//                temporaryCard.name = card.name
-//                temporaryCard.codeType = card.codeType
-//                self.cards.append(temporaryCard)
-//            }
-//            
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
-        self.collectionView.reloadData()
+        DispatchQueue.global().async {
+            let realm = try! Realm()
+            let cards = realm.objects(Card.self)
+            
+            for card in cards {
+                var temporaryCard = Card()
+                temporaryCard.id = card.id
+                temporaryCard.code = card.code
+                temporaryCard.holderName = card.holderName
+                temporaryCard.name = card.name
+                temporaryCard.codeType = card.codeType
+                self.cards.append(temporaryCard)
+            }
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,14 +66,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if segue.identifier == CardViewIdentifiers.editCard {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddCardViewController
-            controller.card = realm.objects(Card.self)[(sender as! IndexPath).row]
+            controller.card = cards[(sender as! IndexPath).row]
         }
     }
     
     // MARK: CollectionView
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return realm.objects(Card.self).count
+        return cards.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -83,7 +82,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardViewIdentifiers.cardCell, for: indexPath) as! CardCollectionViewCell
-        let card = realm.objects(Card.self)[indexPath.row]
+        let card = cards[indexPath.row]
         
         cell.cofigureCell(card: card)
         

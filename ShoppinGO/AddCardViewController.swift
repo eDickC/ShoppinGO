@@ -31,7 +31,7 @@ class AddCardViewController: UIViewController {
         }
         
         cardCodeImage.layer.borderWidth = 1
-        cardCodeImage.layer.borderColor = UIColor.lightGray.cgColor
+        cardCodeImage.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         cardCodeImage.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }

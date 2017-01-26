@@ -22,7 +22,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 10
 
         if let image = card.codeImage() {
-            cardCodeImage.image = card.codeImage()
+            cardCodeImage.image = image
         } else {
             cardCodeImage.image = nil
         }

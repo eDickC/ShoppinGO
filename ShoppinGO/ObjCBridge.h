@@ -11,5 +11,6 @@
 
 #import <EstimoteSDK/EstimoteSDK.h>
 #import <ZXingObjC/ZXingObjC.h>
+#import "KeychainWrapper.h"
 
 #endif /* ObjCBridge_h */
