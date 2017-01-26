@@ -15,13 +15,13 @@ class AddCardViewController: UIViewController {
 
     @IBOutlet weak var cardNameTextField: UITextField!
     @IBOutlet weak var cardholderName: UITextField!
-    @IBOutlet weak var cardCodeLabel: UILabel!
+    @IBOutlet weak var cardCodeLabel: UITextField!
     @IBOutlet weak var cardCodeImage: UIImageView!
     var cardCodeType = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,14 +31,19 @@ class AddCardViewController: UIViewController {
     }
     
     @IBAction func saveCard(_ sender: UIBarButtonItem) {
-        let card = Card()
-        card.cardName = cardNameTextField.text!
-        card.cardHolderName = cardholderName.text!
-        card.cardCode = cardCodeLabel.text!
         
         let realm = try! Realm()
         
         try! realm.write {
+            let card = Card()
+            card.name = cardNameTextField.text!
+            card.holderName = cardholderName.text!
+            card.code = cardCodeLabel.text!
+            card.codeType = cardCodeType
+            cardCodeImage.layer.borderWidth = 2
+            cardCodeImage.layer.borderColor = UIColor.lightGray.cgColor
+            cardCodeImage.layer.cornerRadius = 5
+
             realm.add(card)
         }
         
@@ -55,9 +60,8 @@ class AddCardViewController: UIViewController {
             cardCodeLabel.text = sourceViewController.capturedCode
             var format: ZXBarcodeFormat?
             if let capturedCodeType = sourceViewController.capturedCodeType {
-                cardCodeType = capturedCodeType
-                
-                switch cardCodeType {
+                self.cardCodeType = capturedCodeType
+                switch capturedCodeType {
                 case AVMetadataObjectTypeUPCECode:
                     format = kBarcodeFormatEan13
                 case AVMetadataObjectTypeEAN8Code:
@@ -87,7 +91,6 @@ class AddCardViewController: UIViewController {
             
             do {
                 let writer = ZXMultiFormatWriter()
-                let hints = ZXEncodeHints()
                 if let format = format {
                     let result = try writer.encode(cardCodeLabel.text, format: format, width: 1000, height: 1000)
                     let image = ZXImage(matrix: result)
@@ -102,8 +105,6 @@ class AddCardViewController: UIViewController {
             } catch {
                 print(error)
             }
-            
-            
         }
     }
 
@@ -118,3 +119,4 @@ class AddCardViewController: UIViewController {
     */
 
 }
+

@@ -10,8 +10,8 @@ import Foundation
 import RealmSwift
 
 class Card: Object {
-    dynamic var cardName = ""
-    dynamic var cardCode = ""
-    dynamic var cardCodeType = ""
-    dynamic var cardHolderName = ""
+    dynamic var name = ""
+    dynamic var code = ""
+    dynamic var codeType = ""
+    dynamic var holderName = ""
 }

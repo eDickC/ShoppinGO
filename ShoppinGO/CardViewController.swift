@@ -23,12 +23,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
-        
+        collectionView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -37,11 +39,13 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         DispatchQueue.global().async {
             let realm = try! Realm()
             let cards = realm.objects(Card.self)
-            var temporaryCard = Card()
+            
             for card in cards {
-                temporaryCard.cardCode = card.cardCode
-                temporaryCard.cardHolderName = card.cardHolderName
-                temporaryCard.cardName = card.cardName
+                var temporaryCard = Card()
+                temporaryCard.code = card.code
+                temporaryCard.holderName = card.holderName
+                temporaryCard.name = card.name
+                temporaryCard.codeType = card.codeType
                 self.cards.append(temporaryCard)
             }
             
@@ -58,11 +62,11 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return cards.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return cards.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
