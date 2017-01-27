@@ -11,15 +11,12 @@ import RealmSwift
 import ZXingObjC
 
 class Card: Object {
-    dynamic var id = 0
+
     dynamic var name = ""
     dynamic var code = ""
     dynamic var codeType = ""
     dynamic var holderName = ""
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
+    dynamic var image = ""
     
     func codeImage() -> UIImage? {
         
@@ -64,5 +61,18 @@ class Card: Object {
         }
 
         return nil
+    }
+    
+    func getCardImage() -> UIImage? {
+        switch image {
+        case "Tchibo":
+            return UIImage(named: "tchibo")
+        case "AlpinePro":
+            return UIImage(named: "alpinepro")
+        case "InterSport":
+            return UIImage(named: "intersport")
+        default:
+            return nil
+        }
     }
 }

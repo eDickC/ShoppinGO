@@ -14,14 +14,22 @@ import AVFoundation
 class AddCardViewController: UIViewController {
 
     var card: Card?
+    var pickerDataSource = ["Tchibo", "InterSport", "AlpinePro"]
+    var selectedInPicker = ""
+    
+    //IBOUTLETS
     @IBOutlet weak var cardNameTextField: UITextField!
     @IBOutlet weak var cardholderName: UITextField!
     @IBOutlet weak var cardCodeLabel: UITextField!
     @IBOutlet weak var cardCodeImage: UIImageView!
     var cardCodeType = ""
+    @IBOutlet weak var cardTypePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardTypePicker.delegate = self
+        cardTypePicker.dataSource = self
         
         if let card = card {
             cardNameTextField.text = card.name
@@ -50,17 +58,12 @@ class AddCardViewController: UIViewController {
                 card.holderName = self.cardholderName.text!
                 card.code = self.cardCodeLabel.text!
                 card.codeType = self.cardCodeType
+                card.image = selectedInPicker
                 realm.add(card, update: true)
             }
         } else {
             try! realm.write {
-                let card = Card()
-                card.name = self.cardNameTextField.text!
-                card.holderName = self.cardholderName.text!
-                card.code = self.cardCodeLabel.text!
-                card.codeType = self.cardCodeType
-                
-                realm.add(card)
+                realm.create(Card.self, value: [self.cardNameTextField.text!, self.cardCodeLabel.text!, self.cardCodeType, self.cardholderName.text!, selectedInPicker], update: false)
             }
         }
         dismiss(animated: true, completion: nil)
@@ -133,6 +136,26 @@ class AddCardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension AddCardViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedInPicker = pickerDataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
 
 }
 

@@ -7,24 +7,21 @@
 //
 
 import UIKit
-import ZXingObjC
 
 class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardholderName: UILabel!
     @IBOutlet weak var cardCode: UILabel!
-    @IBOutlet weak var cardCodeImage: UIImageView!
     
     func cofigureCell(card: Card) {
         cardholderName.text = card.holderName
         cardCode.text = card.code
         
+        print(card)
+        
         self.layer.cornerRadius = 10
-
-        if let image = card.codeImage() {
-            cardCodeImage.image = image
-        } else {
-            cardCodeImage.image = nil
+        if let image = card.getCardImage() {
+            self.backgroundView = UIImageView(image: image)
         }
     }
 }

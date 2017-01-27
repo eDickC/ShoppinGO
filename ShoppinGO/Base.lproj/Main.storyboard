@@ -133,21 +133,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2003123233345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPC-sL-4c4">
-                                                    <rect key="frame" x="105" y="126" width="130" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="194" y="128" width="123" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8J-fr-J68">
-                                                    <rect key="frame" x="50" y="18" width="240" height="75"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="of8-wj-sOd"/>
-                                                        <constraint firstAttribute="height" constant="75" id="vQB-EY-SUV"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuzana Plesingerova" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-mP-dIn">
-                                                    <rect key="frame" x="91" y="101" width="158.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="140.5" y="101" width="176.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -155,17 +148,15 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="v0f-mP-dIn" firstAttribute="top" secondItem="I8J-fr-J68" secondAttribute="bottom" constant="8" id="B8q-eM-Sux"/>
+                                            <constraint firstItem="v0f-mP-dIn" firstAttribute="top" secondItem="YEi-A4-EMs" secondAttribute="topMargin" constant="93" id="1ru-dl-w2h"/>
                                             <constraint firstItem="ZPC-sL-4c4" firstAttribute="top" secondItem="v0f-mP-dIn" secondAttribute="bottom" constant="4" id="Bod-4q-8iQ"/>
-                                            <constraint firstItem="I8J-fr-J68" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="EY6-ff-h4a"/>
-                                            <constraint firstItem="I8J-fr-J68" firstAttribute="top" secondItem="YEi-A4-EMs" secondAttribute="topMargin" constant="10" id="RaG-Nb-eqe"/>
-                                            <constraint firstItem="v0f-mP-dIn" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="fuy-Rv-Nqa"/>
-                                            <constraint firstItem="ZPC-sL-4c4" firstAttribute="centerX" secondItem="YEi-A4-EMs" secondAttribute="centerX" id="q2T-Hw-4kb"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="v0f-mP-dIn" secondAttribute="trailing" constant="16" id="b3V-rA-1kh"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ZPC-sL-4c4" secondAttribute="trailing" constant="16" id="nZq-uU-Mth"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cardCode" destination="ZPC-sL-4c4" id="deU-30-hGN"/>
-                                            <outlet property="cardCodeImage" destination="I8J-fr-J68" id="q1Q-Z8-VmB"/>
                                             <outlet property="cardholderName" destination="v0f-mP-dIn" id="9gq-7A-0k3"/>
+                                            <segue destination="3BN-bP-Xzk" kind="presentation" identifier="editCard" id="9nM-32-law"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -188,14 +179,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="kiA-cm-WYw" id="Qo7-Bc-ZWb"/>
-                        <segue destination="Px4-2T-0Gv" kind="presentation" identifier="editCard" id="vua-oJ-WtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atr-1o-0h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="618.44077961019491"/>
+            <point key="canvasLocation" x="2854" y="618"/>
         </scene>
-        <!--Add Card View Controller-->
+        <!--Add Card-->
         <scene sceneID="4lT-iA-5wT">
             <objects>
                 <viewController id="c7o-3q-H2l" customClass="AddCardViewController" customModule="ShoppinGO" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,21 +231,24 @@
                                     <segue destination="xbq-FP-h3a" kind="presentation" id="rxL-Es-pMU"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtE-e9-Wh7">
+                                <rect key="frame" x="0.0" y="240" width="375" height="216"/>
+                            </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fbf-5D-Tun">
-                                <rect key="frame" x="8" y="248" width="359" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="brg-q4-ApP"/>
-                                </constraints>
+                                <rect key="frame" x="8" y="464" width="359" height="146"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NtE-e9-Wh7" secondAttribute="trailing" id="4bJ-Kw-yw2"/>
                             <constraint firstItem="4ZX-eC-f1z" firstAttribute="leading" secondItem="avW-oH-kfp" secondAttribute="leading" constant="8" id="4hN-gD-84Q"/>
-                            <constraint firstItem="Fbf-5D-Tun" firstAttribute="top" secondItem="4ZX-eC-f1z" secondAttribute="bottom" constant="16" id="CSX-my-bhe"/>
+                            <constraint firstItem="Fbf-5D-Tun" firstAttribute="top" secondItem="NtE-e9-Wh7" secondAttribute="bottom" constant="8" id="6gO-MP-zd2"/>
                             <constraint firstAttribute="trailing" secondItem="uXt-sq-N5e" secondAttribute="trailing" constant="8" id="Egx-zU-Naq"/>
                             <constraint firstItem="XEz-DF-xPR" firstAttribute="trailing" secondItem="avW-oH-kfp" secondAttribute="trailingMargin" constant="8" id="GD7-Kg-iCO"/>
                             <constraint firstItem="PXG-C8-QRu" firstAttribute="leading" secondItem="avW-oH-kfp" secondAttribute="leading" constant="8" id="GYI-eD-FHJ"/>
+                            <constraint firstItem="797-Wh-L1o" firstAttribute="top" secondItem="Fbf-5D-Tun" secondAttribute="bottom" constant="8" id="NlI-hR-peF"/>
                             <constraint firstItem="XEz-DF-xPR" firstAttribute="centerY" secondItem="4ZX-eC-f1z" secondAttribute="centerY" id="O7Q-uO-7VA"/>
+                            <constraint firstItem="NtE-e9-Wh7" firstAttribute="top" secondItem="4ZX-eC-f1z" secondAttribute="bottom" constant="8" id="OYF-Ln-bzO"/>
                             <constraint firstAttribute="trailing" secondItem="PXG-C8-QRu" secondAttribute="trailing" constant="8" id="PQj-mN-eUS"/>
                             <constraint firstItem="4ZX-eC-f1z" firstAttribute="top" secondItem="PXG-C8-QRu" secondAttribute="bottom" constant="16" id="Qm4-0t-NF9"/>
                             <constraint firstItem="uXt-sq-N5e" firstAttribute="top" secondItem="T81-59-e3p" secondAttribute="bottom" constant="16" id="YO1-c0-w1s"/>
@@ -264,9 +257,10 @@
                             <constraint firstItem="PXG-C8-QRu" firstAttribute="top" secondItem="uXt-sq-N5e" secondAttribute="bottom" constant="16" id="iBp-lI-SI2"/>
                             <constraint firstItem="Fbf-5D-Tun" firstAttribute="leading" secondItem="avW-oH-kfp" secondAttribute="leading" constant="8" id="iCe-RD-c7R"/>
                             <constraint firstItem="XEz-DF-xPR" firstAttribute="leading" secondItem="4ZX-eC-f1z" secondAttribute="trailing" constant="8" id="mvE-aZ-f2a"/>
+                            <constraint firstItem="NtE-e9-Wh7" firstAttribute="leading" secondItem="avW-oH-kfp" secondAttribute="leading" id="r2M-dT-nZe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xig-eo-N6y">
+                    <navigationItem key="navigationItem" title="Add Card" id="Xig-eo-N6y">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B9Y-lx-kPb">
                             <connections>
                                 <action selector="cancel:" destination="c7o-3q-H2l" id="UgC-Jf-tDJ"/>
@@ -282,6 +276,7 @@
                         <outlet property="cardCodeImage" destination="Fbf-5D-Tun" id="Ovd-EE-i1w"/>
                         <outlet property="cardCodeLabel" destination="4ZX-eC-f1z" id="2N8-Lh-tNz"/>
                         <outlet property="cardNameTextField" destination="uXt-sq-N5e" id="Mxm-bI-8yH"/>
+                        <outlet property="cardTypePicker" destination="NtE-e9-Wh7" id="5sg-x4-186"/>
                         <outlet property="cardholderName" destination="PXG-C8-QRu" id="bg6-Zu-T4z"/>
                     </connections>
                 </viewController>
@@ -363,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nci-ob-ISi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aK2-1V-n0d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5639.1999999999998" y="618.44077961019491"/>
+            <point key="canvasLocation" x="5655" y="618"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="HLT-u0-20Q">
@@ -385,18 +380,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnQ-0Z-31a" id="WCa-zj-OXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3e0-IZ-ckg">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gtj-ci-4L3">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -467,6 +462,25 @@
             </objects>
             <point key="canvasLocation" x="1917.5999999999999" y="618.44077961019491"/>
         </scene>
+        <!--Card Detail-->
+        <scene sceneID="gLw-Nt-asN">
+            <objects>
+                <viewController id="cM6-BE-B21" customClass="CardDetailController" customModule="ShoppinGO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zeI-Go-MBG"/>
+                        <viewControllerLayoutGuide type="bottom" id="A8z-VS-cNj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PhI-Tb-bE8" customClass="CardCollectionViewCell" customModule="ShoppinGO" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Card Detail" id="mDm-d9-PHC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcs-pu-rO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4694" y="-141"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rzh-5t-kem">
             <objects>
@@ -483,13 +497,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8c-F7-tjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3793" y="618"/>
+            <point key="canvasLocation" x="3780" y="618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iwG-pV-8yJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3BN-bP-Xzk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8z4-ze-lHU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cM6-BE-B21" kind="relationship" relationship="rootViewController" id="lu1-Dd-L6S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHF-pd-frS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3780" y="-141"/>
         </scene>
     </scenes>
     <resources>
         <image name="Touch-icon-lg" width="138" height="137"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="vua-oJ-WtZ"/>
-    </inferredMetricsTieBreakers>
 </document>

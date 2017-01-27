@@ -1,4 +1,4 @@
-//
+    //
 //  CardViewController.swift
 //  ShoppinGO
 //
@@ -14,25 +14,27 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     struct CardViewIdentifiers {
         static let cardCell = "cardCollectionViewCell"
         static let editCard = "editCard"
+        static let emptyView = "EmptyCardsView"
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     let realm = try! Realm()
     var cards = [Card]()
+    var emptyCardsView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emptyCardsView = Bundle.main.loadNibNamed(CardViewIdentifiers.emptyView, owner: self, options: [:])?[0]as! UIView
+        emptyCardsView.frame = view.bounds
+        
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         collectionView.delegate = self
         collectionView.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-
-        collectionView.reloadData()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,16 +45,22 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             for card in cards {
                 var temporaryCard = Card()
-                temporaryCard.id = card.id
                 temporaryCard.code = card.code
                 temporaryCard.holderName = card.holderName
                 temporaryCard.name = card.name
                 temporaryCard.codeType = card.codeType
+                temporaryCard.image = card.image
                 self.cards.append(temporaryCard)
             }
             
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
+                if self.cards.isEmpty {
+                    self.view.addSubview(self.emptyCardsView)
+                } else {
+                    self.emptyCardsView.removeFromSuperview()
+                    self.collectionView.reloadData()
+
+                }
             }
         }
     }
@@ -65,8 +73,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == CardViewIdentifiers.editCard {
             let navigationController = segue.destination as! UINavigationController
-            let controller = navigationController.topViewController as! AddCardViewController
-            controller.card = cards[(sender as! IndexPath).row]
+            let controller = navigationController.topViewController as! CardDetailController
         }
     }
     
@@ -91,6 +98,11 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: CardViewIdentifiers.editCard, sender: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.width - 20
+        return CGSize(width: width, height: 159)
     }
     
     

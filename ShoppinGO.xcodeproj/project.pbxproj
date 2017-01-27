@@ -22,6 +22,8 @@
 		23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB201E23CC1000DA50BC /* Main.storyboard */; };
 		23D2AB241E23CC1000DA50BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB231E23CC1000DA50BC /* Assets.xcassets */; };
 		23D2AB271E23CC1000DA50BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */; };
+		23D95D481E3BD561002188B9 /* EmptyCardsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D95D471E3BD561002188B9 /* EmptyCardsView.xib */; };
+		23D95D4A1E3BED04002188B9 /* CardDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D95D491E3BED04002188B9 /* CardDetailController.swift */; };
 		344752584D586A1FDF6FA6B2 /* Pods_ShoppinGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829D8F3D5B3D6B946206ED54 /* Pods_ShoppinGO.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		23D2AB231E23CC1000DA50BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23D2AB261E23CC1000DA50BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23D2AB281E23CC1000DA50BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D95D471E3BD561002188B9 /* EmptyCardsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyCardsView.xib; sourceTree = "<group>"; };
+		23D95D491E3BED04002188B9 /* CardDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailController.swift; sourceTree = "<group>"; };
 		829D8F3D5B3D6B946206ED54 /* Pods_ShoppinGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppinGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D22CF475F345BC66866F117 /* Pods-ShoppinGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppinGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO.release.xcconfig"; sourceTree = "<group>"; };
 		A20510F3C37AEAED5514FC72 /* Pods-ShoppinGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppinGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppinGO/Pods-ShoppinGO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				23D2AB1C1E23CC1000DA50BC /* AppDelegate.swift */,
-				23D2AB1E1E23CC1000DA50BC /* ViewController.swift */,
-				23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */,
+				23D95D441E3BCB97002188B9 /* Model */,
+				23D95D451E3BCC2F002188B9 /* View */,
+				23D95D461E3BCC4A002188B9 /* Controller */,
 				23D2AB201E23CC1000DA50BC /* Main.storyboard */,
 				23D2AB231E23CC1000DA50BC /* Assets.xcassets */,
 				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
@@ -120,14 +125,39 @@
 				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
 				23446DE11E3AA946001B812D /* KeychainWrapper.h */,
 				23446DE21E3AA946001B812D /* KeychainWrapper.m */,
-				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
-				23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */,
-				23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */,
-				23C4F4341E336C3200E07B28 /* Card.swift */,
-				23C4F4361E33726500E07B28 /* CardViewController.swift */,
-				23C4F4381E33783800E07B28 /* CardCollectionViewCell.swift */,
+				23D95D471E3BD561002188B9 /* EmptyCardsView.xib */,
 			);
 			path = ShoppinGO;
+			sourceTree = "<group>";
+		};
+		23D95D441E3BCB97002188B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23C4F4341E336C3200E07B28 /* Card.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		23D95D451E3BCC2F002188B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23C4F4381E33783800E07B28 /* CardCollectionViewCell.swift */,
+				2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		23D95D461E3BCC4A002188B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23C4F4361E33726500E07B28 /* CardViewController.swift */,
+				23AF26A61E2D709A00738DA1 /* AddCardViewController.swift */,
+				23AF26A41E2D6F6A00738DA1 /* ScannerController.swift */,
+				23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */,
+				23D2AB1E1E23CC1000DA50BC /* ViewController.swift */,
+				23D95D491E3BED04002188B9 /* CardDetailController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +226,7 @@
 			files = (
 				238E96CB1E23CE3800F39745 /* .gitignore in Resources */,
 				23D2AB271E23CC1000DA50BC /* LaunchScreen.storyboard in Resources */,
+				23D95D481E3BD561002188B9 /* EmptyCardsView.xib in Resources */,
 				23D2AB241E23CC1000DA50BC /* Assets.xcassets in Resources */,
 				23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */,
 			);
@@ -266,6 +297,7 @@
 				23446DE31E3AA946001B812D /* KeychainWrapper.m in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
 				23C4F4391E33783800E07B28 /* CardCollectionViewCell.swift in Sources */,
+				23D95D4A1E3BED04002188B9 /* CardDetailController.swift in Sources */,
 				23C4F4351E336C3200E07B28 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
