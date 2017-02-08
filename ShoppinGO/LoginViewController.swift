@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var touchIDButton: UIButton!
+    @IBOutlet weak var loginSwitch: UISwitch!
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -27,11 +28,18 @@ class LoginViewController: UIViewController {
     
     struct LoginIdentifiers {
         static let segueIdentifier = "login"
+        static let stayLoggedIn = "stayLoggedIn"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let stayLoggedIn = UserDefaults.standard.value(forKey: LoginIdentifiers.stayLoggedIn) {
+            if stayLoggedIn as! Bool {
+                performSegue(withIdentifier: LoginIdentifiers.segueIdentifier, sender: self)
+            }
+        }
+        
         touchIDButton.isHidden = true
         
         if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
@@ -50,11 +58,16 @@ class LoginViewController: UIViewController {
             createInfoLabel.isHidden = false
         }
         
-        // 3.
         if let storedUsername = UserDefaults.standard.value(forKey: "username") as? String {
             username.text = storedUsername as String
         }
-        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if let stayLoggedIn = UserDefaults.standard.value(forKey: LoginIdentifiers.stayLoggedIn) {
+            if stayLoggedIn as! Bool {
+                performSegue(withIdentifier: LoginIdentifiers.segueIdentifier, sender: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,10 +79,9 @@ class LoginViewController: UIViewController {
         if (username.text == "" || password.text == "") {
             let alertView = UIAlertController(title: "Login Problem",
                                               message: "Wrong username or password." as String, preferredStyle:.alert)
-            let okAction = UIAlertAction(title: "Foiled Again!", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertView.addAction(okAction)
             self.present(alertView, animated: true, completion: nil)
-            return;
         }
         
         username.resignFirstResponder()
@@ -85,17 +97,23 @@ class LoginViewController: UIViewController {
             MyKeychainWrapper.mySetObject(password.text, forKey:kSecValueData)
             MyKeychainWrapper.writeToKeychain()
             UserDefaults.standard.set(true, forKey: "hasLoginKey")
+            if loginSwitch.isOn {
+                UserDefaults.standard.set(true, forKey: LoginIdentifiers.stayLoggedIn)
+            }
             UserDefaults.standard.synchronize()
             loginButton.tag = loginButtonTag
             
             performSegue(withIdentifier: LoginIdentifiers.segueIdentifier, sender: self)
         } else if sender.tag == loginButtonTag {
             if checkLogin(username: username.text!, password: password.text!) {
+                if loginSwitch.isOn {
+                    UserDefaults.standard.set(true, forKey: LoginIdentifiers.stayLoggedIn)
+                }
                 performSegue(withIdentifier: LoginIdentifiers.segueIdentifier, sender: self)
             } else {
                 let alertView = UIAlertController(title: "Login Problem",
                                                   message: "Wrong username or password." as String, preferredStyle:.alert)
-                let okAction = UIAlertAction(title: "Foiled Again!", style: .default, handler: nil)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertView.addAction(okAction)
                 self.present(alertView, animated: true, completion: nil)
             }
@@ -163,15 +181,4 @@ class LoginViewController: UIViewController {
             self.present(alertView, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
