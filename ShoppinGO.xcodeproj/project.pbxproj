@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		23446DE31E3AA946001B812D /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23446DE21E3AA946001B812D /* KeychainWrapper.m */; };
 		2344AC071E26E6FF0003E6E0 /* BeaconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */; };
+		2389A1E21E4B7AD4000F98D2 /* ShoppingCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389A1E11E4B7AD4000F98D2 /* ShoppingCentre.swift */; };
+		2389A1E41E4B7C6C000F98D2 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389A1E31E4B7C6C000F98D2 /* Shop.swift */; };
+		2389A1E61E4B80C8000F98D2 /* EmptyBidsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2389A1E51E4B80C8000F98D2 /* EmptyBidsView.xib */; };
 		238E96CB1E23CE3800F39745 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 238E96CA1E23CE3800F39745 /* .gitignore */; };
 		23AA8D001E23F55C0076A840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */; };
 		23AA8D031E23FCD00076A840 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA8D021E23FCD00076A840 /* UIView.swift */; };
@@ -31,6 +34,9 @@
 		23446DE11E3AA946001B812D /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		23446DE21E3AA946001B812D /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		2344AC061E26E6FF0003E6E0 /* BeaconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconTableViewCell.swift; sourceTree = "<group>"; };
+		2389A1E11E4B7AD4000F98D2 /* ShoppingCentre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCentre.swift; sourceTree = "<group>"; };
+		2389A1E31E4B7C6C000F98D2 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		2389A1E51E4B80C8000F98D2 /* EmptyBidsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyBidsView.xib; sourceTree = "<group>"; };
 		238E96CA1E23CE3800F39745 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		23AA8CFF1E23F55C0076A840 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AA8D021E23FCD00076A840 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -118,13 +124,14 @@
 				23D95D441E3BCB97002188B9 /* Model */,
 				23D95D451E3BCC2F002188B9 /* View */,
 				23D95D461E3BCC4A002188B9 /* Controller */,
-				23D2AB201E23CC1000DA50BC /* Main.storyboard */,
 				23D2AB231E23CC1000DA50BC /* Assets.xcassets */,
-				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
 				23D2AB281E23CC1000DA50BC /* Info.plist */,
 				23AA8D041E24035E0076A840 /* ObjCBridge.h */,
 				23446DE11E3AA946001B812D /* KeychainWrapper.h */,
 				23446DE21E3AA946001B812D /* KeychainWrapper.m */,
+				23D2AB201E23CC1000DA50BC /* Main.storyboard */,
+				23D2AB251E23CC1000DA50BC /* LaunchScreen.storyboard */,
+				2389A1E51E4B80C8000F98D2 /* EmptyBidsView.xib */,
 				23D95D471E3BD561002188B9 /* EmptyCardsView.xib */,
 			);
 			path = ShoppinGO;
@@ -134,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				23C4F4341E336C3200E07B28 /* Card.swift */,
+				2389A1E11E4B7AD4000F98D2 /* ShoppingCentre.swift */,
+				2389A1E31E4B7C6C000F98D2 /* Shop.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 			files = (
 				238E96CB1E23CE3800F39745 /* .gitignore in Resources */,
 				23D2AB271E23CC1000DA50BC /* LaunchScreen.storyboard in Resources */,
+				2389A1E61E4B80C8000F98D2 /* EmptyBidsView.xib in Resources */,
 				23D95D481E3BD561002188B9 /* EmptyCardsView.xib in Resources */,
 				23D2AB241E23CC1000DA50BC /* Assets.xcassets in Resources */,
 				23D2AB221E23CC1000DA50BC /* Main.storyboard in Resources */,
@@ -297,6 +307,8 @@
 				23446DE31E3AA946001B812D /* KeychainWrapper.m in Sources */,
 				23D2AB1D1E23CC1000DA50BC /* AppDelegate.swift in Sources */,
 				23C4F4391E33783800E07B28 /* CardCollectionViewCell.swift in Sources */,
+				2389A1E21E4B7AD4000F98D2 /* ShoppingCentre.swift in Sources */,
+				2389A1E41E4B7C6C000F98D2 /* Shop.swift in Sources */,
 				23D95D4A1E3BED04002188B9 /* CardDetailController.swift in Sources */,
 				23C4F4351E336C3200E07B28 /* Card.swift in Sources */,
 			);

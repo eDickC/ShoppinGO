@@ -29,8 +29,6 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         emptyCardsView = Bundle.main.loadNibNamed(CardViewIdentifiers.emptyView, owner: self, options: [:])?[0]as! UIView
         emptyCardsView.frame = view.bounds
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false

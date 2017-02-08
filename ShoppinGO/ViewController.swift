@@ -18,12 +18,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var id: String = ""
     }
     
+    struct ViewControllerIdentifiers {
+        static let emptyView = "EmptyBidsView"
+    }
+    
     var beacons = [Beacon]()
     let beaconManager = ESTBeaconManager()
-
+    var emptyBidsView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emptyBidsView = Bundle.main.loadNibNamed(ViewControllerIdentifiers.emptyView, owner: self, options: [:])?[0]as! UIView
+        emptyBidsView.frame = view.bounds
+        
+        if self.beacons.isEmpty {
+            self.view.addSubview(self.emptyBidsView)
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,6 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             createNotification(beacon)
         }
         
+        emptyBidsView.removeFromSuperview()
         tableView.reloadData()
     }
     
@@ -82,6 +94,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         tableView.reloadData()
+        
+        if beacons.isEmpty {
+            self.view.addSubview(self.emptyBidsView)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
